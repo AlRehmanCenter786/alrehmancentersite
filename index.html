@@ -1,188 +1,347 @@
 
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Rehman Center</title>
+<title>Al Rehman Center | Online Shopping</title>
 
 <style>
 * {
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #f5f5f5;
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
 }
 
 header {
-background: #123c30;
-color: white;
-text-align: center;
-padding: 25px 10px;
+    background: linear-gradient(120deg,#123c30,#087f5b);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-header h1 {
-margin: 0;
-font-size: 30px;
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin-top: 7px;
+    color: #f8d477;
+}
+
+.search-box {
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+.search-box input {
+    width: 90%;
+    max-width: 600px;
+    padding: 13px;
+    border: 2px solid #087f5b;
+    border-radius: 25px;
+    font-size: 16px;
 }
 
 nav {
-background: #d6a84b;
-padding: 14px;
-text-align: center;
+    background: #e5b94d;
+    padding: 14px;
+    text-align: center;
 }
 
 nav a {
-color: #222;
-text-decoration: none;
-margin: 10px;
-font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    margin: 10px;
 }
 
 .hero {
-background: #123c30;
-color: white;
-text-align: center;
-padding: 45px 15px;
+    background: linear-gradient(120deg,#123c30,#11976b);
+    color: white;
+    text-align: center;
+    padding: 65px 15px;
 }
 
-.hero h2 {
-font-size: 27px;
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-font-size: 17px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #f2c14e;
+    color: #222;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    padding: 30px 10px 20px;
+    color: #123c30;
+    font-size: 26px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.category {
+    background: white;
+    padding: 25px 10px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+    font-weight: bold;
+    font-size: 18px;
+    color: #087f5b;
 }
 
 .products {
-padding: 25px 15px;
-text-align: center;
-}
-
-.products h2 {
-color: #123c30;
-}
-
-.grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 15px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .card {
-background: white;
-border-radius: 12px;
-padding: 12px;
-box-shadow: 0 2px 8px #ccc;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #ddd;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 .card img {
-width: 100%;
-height: 145px;
-object-fit: cover;
-border-radius: 8px;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
 }
 
 .card h3 {
-color: #123c30;
+    font-size: 16px;
+    margin: 12px 5px;
 }
 
 .price {
-color: #b8860b;
-font-weight: bold;
+    color: #087f5b;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
-button {
-background: #16834b;
-color: white;
-border: none;
-padding: 12px 18px;
-border-radius: 7px;
-font-size: 15px;
+.order-btn {
+    display: inline-block;
+    background: #168b50;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.about {
+    background: #eaf5ef;
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 1.8;
 }
 
 .contact {
-background: #123c30;
-color: white;
-text-align: center;
-padding: 30px 15px;
+    background: #123c30;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+.whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 footer {
-background: #111;
-color: white;
-text-align: center;
-padding: 15px;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
 }
 
+@media(min-width:700px) {
+    .products {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .categories {
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .card img {
+        height: 260px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>الرحمٰن سینٹر</h1>
-<p>AL REHMAN CENTER</p>
+    <div class="logo">AL REHMAN CENTER</div>
+    <p class="tagline">Your Style, Our Priority</p>
 </header>
 
+<div class="search-box">
+    <input type="text"
+    id="search"
+    placeholder="Search for products..."
+    onkeyup="searchProducts()">
+</div>
+
 <nav>
-<a href="#home">ہوم</a>
-<a href="#products">پروڈکٹس</a>
-<a href="#contact">رابطہ</a>
+    <a href="#home">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero" id="home">
-<h2>خوش آمدید!</h2>
-<p>آپ کی پسند، ہماری اولین ترجیح</p>
-<p>بہترین کپڑے اور بہترین قیمتیں</p>
+    <h1>Welcome to Al Rehman Center</h1>
+    <p>Discover The Latest Fashion & Best Prices</p>
+    <a href="#products" class="shop-btn">SHOP NOW</a>
 </section>
 
-<section class="products" id="products">
+<h2 class="section-title" id="categories">
+    SHOP BY CATEGORY
+</h2>
 
-<h2>ہماری مصنوعات</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
-<h3>مردانہ ٹی شرٹ</h3>
-<p class="price">قیمت: جلد دستیاب ہوگی</p>
+<div class="categories">
+    <div class="category">👔 Men's Fashion</div>
+    <div class="category">👗 Women's Fashion</div>
+    <div class="category">👕 Casual Wear</div>
+    <div class="category">✨ New Collection</div>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500">
-<h3>خواتین کے کپڑے</h3>
-<p class="price">قیمت: جلد دستیاب ہوگی</p>
+<h2 class="section-title" id="products">
+    FEATURED PRODUCTS
+</h2>
+
+<div class="products" id="productList">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="Men T Shirt">
+        <h3>Men's T-Shirt</h3>
+        <p class="price">Price: PKR 1,500</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20Men's%20T-Shirt">Order on WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600" alt="Women's Fashion">
+        <h3>Women's Fashion</h3>
+        <p class="price">Price: PKR 2,500</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20Women's%20Fashion">Order on WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600" alt="Fashion Dress">
+        <h3>Fashion Collection</h3>
+        <p class="price">Price: PKR 3,000</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20Fashion%20Collection">Order on WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600" alt="Casual Clothes">
+        <h3>Casual Wear</h3>
+        <p class="price">Price: PKR 1,800</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20Casual%20Wear">Order on WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="New Style">
+        <h3>New Style</h3>
+        <p class="price">Price: PKR 2,200</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20New%20Style">Order on WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="New Collection">
+        <h3>New Collection</h3>
+        <p class="price">Price: PKR 3,500</p>
+        <a class="order-btn" href="https://wa.me/923001234567?text=I%20want%20to%20order%20New%20Collection">Order on WhatsApp</a>
+    </div>
+
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500">
-<h3>فیشن کلیکشن</h3>
-<p class="price">قیمت: جلد دستیاب ہوگی</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
-<h3>نئی ورائٹی</h3>
-<p class="price">قیمت: جلد دستیاب ہوگی</p>
-</div>
-
-</div>
+<section class="about">
+    <h2>ABOUT AL REHMAN CENTER</h2>
+    <p>
+        Welcome to Al Rehman Center.
+        We offer stylish clothing,
+        quality products and great prices.
+        Your satisfaction is our priority.
+    </p>
 </section>
 
 <section class="contact" id="contact">
-<h2>ہم سے رابطہ کریں</h2>
-<p>Al Rehman Center</p>
-<p>آپ کی خدمت کے لیے حاضر ہیں</p>
+    <h2>CONTACT US</h2>
+    <p>Al Rehman Center</p>
+    <p>We Are Here To Serve You!</p>
+
+    <a class="whatsapp"
+    href="https://wa.me/923001234567">
+    Chat With Us on WhatsApp
+    </a>
 </section>
 
 <footer>
-<p>© 2026 Al Rehman Center</p>
-<p>تمام حقوق محفوظ ہیں</p>
+    <p>© 2026 Al Rehman Center</p>
+    <p>All Rights Reserved.</p>
 </footer>
 
+<script>
+function searchProducts() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card) {
+        let name = card.innerText.toLowerCase();
+
+        card.style.display =
+            name.includes(input) ? "" : "none";
+    });
+}
+</script>
+
 </body>
-  </html>
+</html>
