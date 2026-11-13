@@ -4,272 +4,310 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Rehman Center | Khaddar Collection</title>
+<title>Al Rehman Center | Fashion Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background: #fffaf5;
-    color: #29201c;
+body{
+    background:#faf8f5;
+    color:#292323;
 }
 
-header {
-    background: #241713;
-    color: white;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.topbar{
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:9px;
+    font-size:12px;
+    letter-spacing:1px;
 }
 
-.logo {
-    font-size: 23px;
-    font-weight: 800;
-    color: #e6b875;
+header{
+    background:white;
+    padding:18px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 3px 15px #00000010;
 }
 
-nav {
-    display: flex;
-    gap: 18px;
+.logo{
+    font-size:25px;
+    font-weight:800;
+    color:#8b1748;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
+.logo span{
+    color:#c99a45;
 }
 
-.hero {
-    min-height: 420px;
-    padding: 55px 8%;
-    display: flex;
-    align-items: center;
-    color: white;
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 12px;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#a11c55;
+}
+
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    padding:60px 8%;
     background:
-    linear-gradient(90deg, rgba(24,14,11,.82), rgba(24,14,11,.16)),
-    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85')
-    center/cover;
+    linear-gradient(90deg,rgba(30,10,20,.85),rgba(30,10,20,.15)),
+    url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=90');
+    background-size:cover;
+    background-position:center;
+    color:white;
 }
 
-.hero small {
-    color: #efc58e;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.hero-content{
+    max-width:550px;
 }
 
-.hero h1 {
-    font-size: clamp(40px, 7vw, 68px);
-    line-height: 1.1;
-    margin: 15px 0;
+.hero h1{
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:20px;
 }
 
-.hero p {
-    max-width: 440px;
-    line-height: 1.8;
-    margin-bottom: 24px;
+.hero h1 span{
+    color:#f3c66d;
 }
 
-.btn {
-    display: inline-block;
-    background: #c18a4b;
-    color: white;
-    text-decoration: none;
-    padding: 12px 23px;
-    font-weight: 700;
-    border-radius: 3px;
+.hero p{
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:28px;
 }
 
-.collection {
-    padding: 58px 6%;
-    max-width: 1400px;
-    margin: auto;
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#b5235d;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.heading {
-    text-align: center;
-    margin-bottom: 32px;
+.btn:hover{
+    background:#85133e;
+    transform:translateY(-3px);
 }
 
-.heading small {
-    color: #bd8545;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.section{
+    padding:65px 7%;
 }
 
-.heading h2 {
-    font-size: 32px;
-    margin: 8px 0;
-    color: #241713;
+.section-title{
+    text-align:center;
+    margin-bottom:38px;
 }
 
-.heading p {
-    font-size: 13px;
-    color: #81756d;
+.section-title h2{
+    font-size:32px;
+    color:#8b1748;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+.section-title p{
+    color:#777;
+    margin-top:8px;
 }
 
-.card {
-    background: white;
-    border: 1px solid #eee4db;
-    border-radius: 8px;
-    overflow: hidden;
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.card img {
-    width: 100%;
-    height: 290px;
-    object-fit: cover;
-    display: block;
+.category{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 25px #00000012;
+    transition:.3s;
 }
 
-.info {
-    padding: 16px;
+.category:hover{
+    transform:translateY(-8px);
 }
 
-.info h3 {
-    font-size: 14px;
-    min-height: 42px;
-    margin-bottom: 8px;
+.category img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
 }
 
-.old {
-    color: #948981;
-    text-decoration: line-through;
-    font-size: 13px;
-    margin-right: 8px;
+.category-info{
+    text-align:center;
+    padding:22px;
 }
 
-.new {
-    color: #ad702f;
-    font-size: 20px;
-    font-weight: 800;
+.category-info h3{
+    font-size:22px;
+    margin-bottom:12px;
+    color:#8b1748;
 }
 
-.save {
-    color: #18804a;
-    font-size: 12px;
-    margin: 7px 0 13px;
+.category-info a{
+    display:inline-block;
+    text-decoration:none;
+    background:#171717;
+    color:white;
+    padding:10px 23px;
+    border-radius:4px;
+    font-size:13px;
+    font-weight:600;
 }
 
-.order {
-    display: block;
-    background: #16834b;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    padding: 11px;
-    font-size: 12px;
-    font-weight: 700;
-    border-radius: 3px;
+.banner{
+    margin:15px 7% 65px;
+    padding:65px 30px;
+    text-align:center;
+    border-radius:12px;
+    color:white;
+    background:
+    linear-gradient(90deg,rgba(85,15,45,.88),rgba(85,15,45,.65)),
+    url('https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1500&q=85');
+    background-size:cover;
+    background-position:center;
 }
 
-.note {
-    text-align: center;
-    color: #8a7d73;
-    font-size: 11px;
-    margin-top: 20px;
+.banner h2{
+    font-size:35px;
+    margin-bottom:12px;
 }
 
-.about {
-    background: #f1e8df;
-    text-align: center;
-    padding: 48px 8%;
+.banner p{
+    margin-bottom:22px;
 }
 
-.about h2 {
-    font-size: 30px;
-    margin-bottom: 12px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.about p {
-    max-width: 700px;
-    margin: auto;
-    color: #6f6259;
-    font-size: 13px;
-    line-height: 1.9;
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 20px #00000010;
 }
 
-footer {
-    background: #241713;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    line-height: 2;
-    font-size: 13px;
+.product img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
 }
 
-footer h2 {
-    color: #e6b875;
-    font-size: 27px;
+.product-info{
+    text-align:center;
+    padding:20px;
 }
 
-footer a {
-    color: #e6b875;
+.product-info h3{
+    color:#8b1748;
+    margin-bottom:10px;
 }
 
-@media(max-width: 900px) {
-    .products {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.product-info a{
+    display:inline-block;
+    background:#b5235d;
+    color:white;
+    padding:10px 22px;
+    text-decoration:none;
+    border-radius:4px;
+    font-size:13px;
 }
 
-@media(max-width: 560px) {
-    header {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav {
-        justify-content: center;
-        gap: 13px;
-    }
-
-    .hero {
-        min-height: 360px;
-    }
-
-    .products {
-        gap: 12px;
-    }
-
-    .card img {
-        height: 220px;
-    }
-
-    .info {
-        padding: 11px;
-    }
-
-    .info h3 {
-        font-size: 12px;
-    }
-
-    .new {
-        font-size: 17px;
-    }
+footer{
+    background:#171717;
+    color:white;
+    padding:45px 7%;
+    text-align:center;
 }
 
-@media(max-width: 370px) {
-    .products {
-        grid-template-columns: 1fr;
+footer h2{
+    color:#e8bd6c;
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#ccc;
+    line-height:2;
+}
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:700;
+    box-shadow:0 5px 20px #00000030;
+    z-index:1000;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
     }
 
-    .card img {
-        height: 300px;
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:440px;
+        padding:45px 7%;
+        background-position:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .categories,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .category img{
+        height:350px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .banner h2{
+        font-size:27px;
     }
 }
 </style>
@@ -277,46 +315,167 @@ footer a {
 
 <body>
 
+<div class="topbar">
+    WELCOME TO AL REHMAN CENTER | FASHION & STYLE
+</div>
+
 <header>
-    <div class="logo">AL REHMAN CENTER</div>
+
+    <div class="logo">
+        AL REHMAN <span>CENTER</span>
+    </div>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#khaddar">Khaddar</a>
-        <a href="#about">About</a>
+        <a href="#categories">Categories</a>
+        <a href="#collection">Collection</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
 <section class="hero" id="home">
-    <div>
-        <small>Al Rehman Center Presents</small>
-        <h1>Khaddar<br>Collection</h1>
-        <p>Discover beautiful seasonal styles at special sale prices.</p>
-        <a class="btn" href="#khaddar">SHOP COLLECTION</a>
+
+    <div class="hero-content">
+
+        <h1>
+            Discover Your
+            <span>Beautiful Style</span>
+        </h1>
+
+        <p>
+            Welcome to Al Rehman Center.
+            Explore beautiful ladies suits,
+            stylish gents wear and lovely
+            kids collections.
+        </p>
+
+        <a class="btn"
+        href="https://wa.me/923086122126?text=Assalamualaikum%20Al%20Rehman%20Center%2C%20I%20want%20to%20place%20an%20order">
+        ORDER NOW
+        </a>
+
     </div>
+
 </section>
 
-<section class="collection" id="khaddar">
+<section class="section" id="categories">
 
-    <div class="heading">
-        <small>New Season</small>
-        <h2>Khaddar 3 Piece Suits</h2>
-        <p>Old Price Rs. 3,200 — Sale Price Rs. 2,800</p>
+    <div class="section-title">
+
+        <h2>SHOP BY CATEGORY</h2>
+
+        <p>
+            Explore Our Exclusive Collections
+        </p>
+
+    </div>
+
+    <div class="categories">
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85">
+
+            <div class="category-info">
+
+                <h3>Ladies Suits</h3>
+
+                <a href="#collection">
+                    EXPLORE NOW
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=85">
+
+            <div class="category-info">
+
+                <h3>Gents Suits</h3>
+
+                <a href="#collection">
+                    EXPLORE NOW
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="category">
+
+            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=85">
+
+            <div class="category-info">
+
+                <h3>Kids Suits</h3>
+
+                <a href="#collection">
+                    EXPLORE NOW
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="banner">
+
+    <h2>NEW FASHION COLLECTION</h2>
+
+    <p>
+        Beautiful Designs | Premium Style | Best Collection
+    </p>
+
+    <a class="btn"
+    href="https://wa.me/923086122126">
+        SHOP NOW
+    </a>
+
+</section>
+
+<section class="section" id="collection">
+
+    <div class="section-title">
+
+        <h2>OUR SPECIAL COLLECTION</h2>
+
+        <p>
+            Find Your Favourite Fashion
+        </p>
+
     </div>
 
     <div class="products">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85" alt="Khaddar suit sample">
-            <div class="info">
-                <h3>Bin Saeed Style Khaddar 3 Piece</h3>
-                <span class="old">Rs. 3,200</span>
-                <span class="new">Rs. 2,800</span>
-                <p class="save">You Save Rs. 400</p>
-                <a class="order" href="https://wa.me/923086122126?text=I%20want%20Bin%20Saeed%20Style%20Khaddar%203%20Piece">ORDER ON WHATSAPP</a>
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=85">
+
+            <div class="product-info">
+
+                <h3>Beautiful Ladies Wear</h3>
+
+                <a href="https://wa.me/923086122126?text=I%20want%20Ladies%20Suits">
+                    ORDER NOW
+                </a>
+
             </div>
+
         </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e3?auto=format&fit=crop&w=800
+        <div class="product">
+
+            <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=85">
+
+            <div class="product-info">
+
+                <h3>Stylish Gents Wear</h3>
+
+                <a
